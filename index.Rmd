@@ -1,0 +1,27 @@
+---
+title: Test
+subtitle: Test
+author: Konstantin Shakhbazov
+github: {user: kn3in, repo: test_pages, branch: "gh-pages"}
+framework: minimal
+mode: selfcontained
+widgets: [polycharts]
+highlighter: highlight.js
+hitheme: solarized_light
+assets:
+  css: 
+    - "http://fonts.googleapis.com/css?family=Open+Sans"
+    - "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700"
+---
+
+```{r echo = F, message = F, cache = F, comment = NA, warning = FALSE}
+library(knitr)
+opts_chunk$set(results = 'asis', comment = NA, message = F, tidy = FALSE)
+options(knitr.table.format = 'html')
+```
+
+# Intro
+
+```{r}
+kable(head(mtcars))
+```
